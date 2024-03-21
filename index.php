@@ -8,10 +8,19 @@
 </head>
 
 <body>
-  <?php
-  $name = 'Casmir';
-  echo "Hello {$name}! Welcome to your first PHP session";
-  ?>
+  <form action="index.php" method="get">
+    <label for="name">Name:</label> <br>
+    <input type="text" name="username" placeholder="username">
+    <br><br>
+    <label for="password">Password:</label><br>
+    <input type="password" name="password" placeholder="password"><br><br>
+    <button type="submit">Submit</button>
+  </form>
 </body>
 
 </html>
+
+<?php
+echo "{$_GET['username']} <br>";
+echo "{$_GET['password']} <br>";
+?>
