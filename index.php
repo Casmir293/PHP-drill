@@ -8,6 +8,7 @@
 </head>
 
 <body>
+  <h2>Login</h2>
   <form action="index.php" method="post">
     <label for="name">Name:</label> <br>
     <input type="text" name="username" placeholder="username">
