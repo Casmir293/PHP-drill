@@ -8,20 +8,25 @@
 </head>
 
 <body>
-  <h2>Login</h2>
+  <h2>Pizza Shopping Cart</h2>
+  <p>Each pizza costs $4.55</p>
+
   <form action="index.php" method="post">
-    <label for="name">Name:</label> <br>
-    <input type="text" name="username" placeholder="username">
+    <label>Quatity</label>
+    <input type="number" name="quantity" placeholder="Input qty">
     <br><br>
-    <label for="password">Password:</label><br>
-    <input type="password" name="password" placeholder="password"><br><br>
     <button type="submit">Submit</button>
   </form>
+  <br>
 </body>
 
 </html>
 
 <?php
-echo "{$_POST['username']} <br>";
-echo "{$_POST['password']} <br>";
+$qty = $_POST['quantity'];
+$price = 4.55;
+$total = $qty * $price;
+
+echo "You ordered <b>{$qty}</b> pizza/s. <br>";
+echo "Your total is: <b>\${$total}</b>";
 ?>
